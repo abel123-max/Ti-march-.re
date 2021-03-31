@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(b_login.jpeg)no-repeat ;
+     background-size: cover;
+    }
+    .menu{
+    display: flex;
+flex-direction: row;
+justify-content: space-around;
+background-color: #00466fd8;
+height: 80px;
+color: whitesmoke;
+
+
+}
+a{
+   text-decoration: none;
+ 
+    font-size: 27px;
+    font-family: 'Baloo Tammudu 2', cursive;
+  
+}
+li{
+     list-style: none;
+       margin-top: 18px;  
+}
+.formulaire_login{
+    display: flex;
+    width: 375px;
+    margin: auto;
+    margin-top: 6%;
+    padding:2.5%;
+   }
+   input{
+       margin: 11px auto 11px auto;
+       border-left: none;
+       border-right:none;
+       border-top: none;
+       background-color:#00466f;
+       border-bottom: 2px solid #c7cf00 ;
+       padding: 4px 6px;
+       
+   }
+   ::placeholder{
+       color: white;
+       
+   }
+   form{
+       background-color: #00466f;
+       border-radius:13px;
+       padding: 40px 50px ;
+       
+     border: 2px solid #fef264;
+   }
+   p{
+       text-align: center;
+       margin-bottom: 20px;
+       color: #ff222b;
+       font-size: 1.6em;
+   
+   }
+   .bouton_login{
+       background-color: #00466f ;
+       border: 2px solid #c7cf00 ;
+       color: #fff;
+       border-radius: 6px;
+       display: flex;
+       justify-content: center;
+       padding: 8px 10px;
+       margin-bottom: 20px;
+   }
