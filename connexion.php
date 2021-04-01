@@ -18,13 +18,13 @@
 <form method="post">
 <input type="text" name="adresse_mail_utilisateur"  placeholder="Adresse mail">
 
-<input type="text" name="mot_de_passe_utilisateur"  placeholder="Mot de passe">
+<input type="password" name="mot_de_passe_utilisateur"  placeholder="Mot de passe">
 
 <input name="bouton_login_utilisateur" type="submit" value="Valider">
 </form>
 <?php 
 if (isset($_POST['bouton_login_utilisateur']) & !empty($_POST["adresse_mail_utilisateur"]) & !empty($_POST["mot_de_passe_utilisateur"])) {
-    $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarché;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $reponse = $bdd->query('SELECT * FROM utilisateur WHERE  adresse_mail="' .$_POST["adresse_mail_utilisateur"] .'" ');
     while($donnees = $reponse->fetch()){
         $mdp= $donnees['pass'];

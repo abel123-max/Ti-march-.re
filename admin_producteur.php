@@ -8,6 +8,12 @@
 
 </head>
 <body>
+<div class="menu">
+        <img  src="logo_Timarche.png" width="100px">
+        <li> <a>Acceuil</a></li>
+        <li> <a>Ajout de produit</a></li>
+        <li> <a >Deconnexion</a></li>
+    </div>
 
 <div class="container">
     <form class="formulaire"  method="post">
@@ -41,7 +47,7 @@
     </form>
   </div>
 <?php
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=timarché;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $reponse = $bdd->query('SELECT * FROM producteur');
 if (isset($_POST['nom_producteur'])
 && isset($_POST['produit'])
@@ -78,23 +84,15 @@ echo "<br>\n";
 echo  $donnees['secteur'];
 echo "<br>\n";
 echo  $donnees['valeur'];
+echo "<br>\n";
+echo '<a class="modifier" href="modifier_producteur.php?id=' .$donnees['id']. '">modifier</a> n';
+echo "<br>\n";
+echo '<a class="supprimer" href="supprimer_producteur.php?id=' .$donnees['id']. '">supprimer</a> ';
 echo "<form method='post'>";
-echo '<input name="supprimer" type="submit" value="supprimer"';
 echo "</form>";
 echo '</div>';
-echo "<br>\n";
-echo "<a href=\"modifier_producteur.php?id=" .$donnees['id']. "\">Modifier</a>\n";
-echo "<br>\n";
-
-if (isset($_POST['supprimer'])) {
-    $requete = 'DELETE FROM producteur WHERE id="' .$donnees['id'].'"'; 
-    $resultat = $bdd->query($requete);
-    }
 }
-echo'</div>';
 
 ?>
-
-
 </body>
 </html>

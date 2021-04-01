@@ -21,27 +21,27 @@
     <form method="post">
         <p> Utilisateur <br> Inscrivez vous</p>
 
-         <input type="text" name="nom_utilisateur" placeholder="Nom">
+         <input type="text" name="nom_utilisateur" placeholder="Nom" required="required" >
    
 
 
-            <input type="text" name="prenom_utilisateur" placeholder="Prenom" >
+            <input type="text" name="prenom_utilisateur" placeholder="Prenom" required="required" >
      
 
    
-               <input type="email" name="adresse_mail_utilisateur"  placeholder="Adresse mail">
+               <input type="email" name="adresse_mail_utilisateur"  placeholder="Adresse mail" required="required">
     
-               <input type="text" name="adresse_utilisateur"  placeholder="Adresse">
+               <input type="text" name="adresse_utilisateur"  placeholder="Adresse" required="required">
 
 
-                     <input type="password" name="mot_de_passe_utilisateur"  placeholder="Mot de passe" >
+                     <input type="password" name="mot_de_passe_utilisateur"  placeholder="Mot de passe" required="required">
 
 
 
-                 <input type="password"name="confirmez_mot_de_passe_utilisateur"  placeholder="Confirmez mot de passe">
+                 <input type="password"name="confirmez_mot_de_passe_utilisateur"  placeholder="Confirmez mot de passe" required="required">
                  
 <?php $erreur="";
- $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarché;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+ $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
        $reponse = $bdd->query('SELECT * FROM utilisateur');
        if (isset($_POST['nom_utilisateur'])
        && isset($_POST['prenom_utilisateur'])

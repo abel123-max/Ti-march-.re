@@ -44,7 +44,7 @@ if (isset($_POST['modifier']) || isset($_POST['valider'])) {
   </div>
 </body>
 <?php 
- $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarché;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+ $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 if (isset($_POST['modifier'])) {
     
 
