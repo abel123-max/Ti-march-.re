@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(b_login.jpeg)no-repeat ;
+     background-size: cover;
+    }
+
+    .menu{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #00466fd8;
+    height: 80px;
+    color: whitesmoke;
+    
+    
+    }
+
+    a{
+       text-decoration: none;
+     
+        font-size: 27px;
+        font-family: 'Baloo Tammudu 2', cursive;
+      
+    }
+
+    li{
+        list-style: none;
+          margin-top: 18px;  
+   }
+
+.container{
+   
+    padding: 15px;
+    margin: auto;
+
+
+}
+input{
+    margin: 11px auto 11px auto;
+}
+
+.formulaire{
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 450px; 
+       background-color: #fef1649f;
+       margin: auto;
+}
+
+.container_produit{
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: space-evenly;
+
+}
+
+.produit{
+    border-radius: 20px;
+    background-color: #ff222973;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    padding: 10px;
+    width: 350px;
+    flex-direction: column;
+
+}
+
+
+select{
+    padding: 4px 6px;
+    margin: 3px 5px;
+    width: 150px;
+margin: auto;
+margin-top: 15px ;
+}
+
+.modifier{
+font-size: 15px;
+}

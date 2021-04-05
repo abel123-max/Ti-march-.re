@@ -47,7 +47,7 @@
     </form>
   </div>
 <?php
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=servi1617577;charset=utf8', 'servi1617577', 'Simplon974', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $reponse = $bdd->query('SELECT * FROM producteur');
 if (isset($_POST['nom_producteur'])
 && isset($_POST['produit'])
@@ -64,7 +64,6 @@ $requete = 'INSERT INTO producteur VALUES(NULL,
 "' . $_POST['prix'] . '",
 "' . $_POST['secteur']. '",
 "' . $_POST['valeur']. '"
-
 )';
    
 $resultat = $bdd->query($requete);

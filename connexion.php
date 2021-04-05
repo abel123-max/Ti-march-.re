@@ -24,7 +24,7 @@
 </form>
 <?php 
 if (isset($_POST['bouton_login_utilisateur']) & !empty($_POST["adresse_mail_utilisateur"]) & !empty($_POST["mot_de_passe_utilisateur"])) {
-    $bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd = new PDO('mysql:host=127.0.0.1;dbname=servi1617577;charset=utf8', 'servi1617577', 'Simplon974', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $reponse = $bdd->query('SELECT * FROM utilisateur WHERE  adresse_mail="' .$_POST["adresse_mail_utilisateur"] .'" ');
     while($donnees = $reponse->fetch()){
         $mdp= $donnees['pass'];
