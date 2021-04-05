@@ -41,7 +41,7 @@
                  <input type="password"name="confirmez_mot_de_passe_utilisateur"  placeholder="Confirmez mot de passe" required="required">
                  
 <?php $erreur="";
- $bdd = new PDO('mysql:host= localhost;dbname=id15062692_marche;charset=utf8', 'id15062692_abel', 'cr^$|x7<UsrkpkZ8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+ $bdd = new PDO('mysql:host= localhost,dbname=id15062692_marche;charset=utf8', 'id15062692_abel', 'cr^$|x7<UsrkpkZ8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
        $reponse = $bdd->query('SELECT * FROM utilisateur');
        if (isset($_POST['nom_utilisateur'])
        && isset($_POST['prenom_utilisateur'])
