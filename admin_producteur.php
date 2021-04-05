@@ -47,7 +47,7 @@
     </form>
   </div>
 <?php
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=timarche;charset=utf8', 'admin', 'Simplon974*', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new PDO('mysql:host=localhost;dbname= id15062692_marche;charset=utf8', ' id15062692_abel', 'cr^$|x7<UsrkpkZ8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $reponse = $bdd->query('SELECT * FROM producteur');
 if (isset($_POST['nom_producteur'])
 && isset($_POST['produit'])
