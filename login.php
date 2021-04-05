@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
 <div class="menu">
         <img  src="logo_Timarche.png" width="100px">
         <li> <a href="index.php">Acceuil</a></li>
@@ -31,12 +41,7 @@
                  <input type="password"name="confirmez_mot_de_passe_utilisateur"  placeholder="Confirmez mot de passe" required="required">
                  
 <?php $erreur="";
- $servername = 'localhost';
-            $username = 'root';
-            $password = 'root';
-            
-            //On établit la connexion
-            $conn = new mysqli($servername, $username, $password);
+ $bdd = new PDO('mysql:host= localhost;dbname=id15062692_marche;charset=utf8', 'id15062692_abel', 'cr^$|x7<UsrkpkZ8', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
        $reponse = $bdd->query('SELECT * FROM utilisateur');
        if (isset($_POST['nom_utilisateur'])
        && isset($_POST['prenom_utilisateur'])
