@@ -1,7 +1,7 @@
 <?php  
 $id=$_GET['id'];
 // Connexion à la base de données
-$link = mysqli_connect("localhost", " id15062692_abel", "cr^$|x7<UsrkpkZ8", " id15062692_marche");
+$link = mysqli_connect("localhost", "id15062692_abel", "cr^$|x7<UsrkpkZ8", "id15062692_marche");
  $link -> set_charset('utf8');
 // Vérification de la connexion
 if($link === false){
